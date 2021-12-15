@@ -20,7 +20,7 @@ public class FindDuplicateswithMap {
 			listOfIntegers.add(i);
 		}
 		
-		Map<Integer,Integer> m = new HashMap<Integer,Integer>();
+		
 		findDuplicateswithMap(listOfIntegers);
 		
 		
