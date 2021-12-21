@@ -6,8 +6,8 @@ public class SubArrayWhoseSumIsNumber {
 	public static void main(String[] args) {
 		// Java program to find continuous
 		//sub array whose sum is equal to a given number
-		int[] res=findSubArrayOfSumValue(new int[] {42, 15, 12, 8, 6, 32},26);
-		System.out.println(Arrays.toString(res));
+		findSubArrayOfSumValue(new int[] {42, 15, 12, 8, 6, 32},26);
+		
 	}
 
 	private static int[] findSubArrayOfSumValue(int[] a,int sum) {
