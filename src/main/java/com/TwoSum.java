@@ -11,6 +11,8 @@ public class TwoSum {
 		int target=9;
 		int[] resArray=findTwoSumHM(arr,target);
 		System.out.println(Arrays.toString(resArray));
+		int[] result=findpattern(arr);
+		System.out.println(Arrays.toString(result));
 	}
 	
 	
@@ -36,9 +38,25 @@ public class TwoSum {
 		HashMap<Integer,Integer> map=new HashMap<>();
 		
 		for(int i=0;i<a.length-1;i++) {
-			int complement=target-a[i];
+			int complement=target-a[i]; 
 			if(map.containsKey(complement)) {
 				return new int[] {map.get(complement),i};
+			}else {
+				map.put(a[i],i);
+			}
+		}
+		return new int[] {};
+	}
+	
+	
+static int[] findpattern(int[] a) {
+		
+		HashMap<Integer,Integer> map=new HashMap<>();
+		
+		for(int i=0;i<a.length-1;i++) {
+			int req=2*i; 
+			if(map.containsKey(req)) {
+				return new int[] {map.get(req),i};
 			}else {
 				map.put(a[i],i);
 			}
